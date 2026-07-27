@@ -106,12 +106,12 @@ def display_students(students):
         print("No students have been added yet.")
         return
     print("-" * 50)
-    print(f"{'Name':<15}{'ID':<15}{'Scores':<15}{'Average'}")
+    print(f"{'Name':<15}{'ID':<15}{'Scores':<25}{'Average'}")
     print("-" * 50)
     for student in students:
         avg = calculate_average(student["scores"])
         scores_str = ", ".join(str(s) for s in student["scores"])
-        print(f"{student['name']:<15}{student['id']:<15}{scores_str:<15}{avg}")
+        print(f"{student['name']:<15}{student['id']:<15}{scores_str:<25}{avg}")
     print("-" * 50)
 
 def calculate_average(scores):
